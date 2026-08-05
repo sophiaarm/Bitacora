@@ -1,106 +1,208 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="es"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitácora Paula Ovalle</title>
+    <title>Bitácora - Introducción a la Robótica</title>
     <link rel="icon" type="image/png" href="recursos/img/LogoFin1.png">
+    
     <style>
-        /*CSS, este si es un lenguaje de programación, Diseñar en Cascada*/
-        html, body{
+        html, body {
             height: 100%;
             margin: 0;
             font-family: Arial, sans-serif;
-        
+            background-color: #f4f6f9;
         }
-        body{
+
+        body {
             display: flex;
             flex-direction: column;
             text-align: center;
         }
-        header{
-            padding: 20px;
-            background-color: rgba(99, 145, 181, 0.994)
-        }
-        <h1> {
-    color: white;
-    text-shadow: 
-        0 0 5px #e993e6,
-        0 0 5px #e993e6,
-        0 0 10px#e993e6,
-        0 0 20px #e993e6,
-        0 0 40px #e993e6,
-        0 0 80px #e993e6,
 
+        /* Header con fondo azul/celeste */
+        header {
+            padding: 20px;
+            background-color: rgba(99, 145, 181, 0.994);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-        main{
+
+        /* Título con brillo neón rosa */
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 2.5rem;
+            text-shadow: 
+                0 0 5px #e993e6,
+                0 0 5px #e993e6,
+                0 0 10px #e993e6,
+                0 0 20px #e993e6,
+                0 0 40px #e993e6,
+                0 0 80px #e993e6;
+        }
+
+        main {
             flex: 1;
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
+            width: 90%;
         }
-        footer{
+
+        /* Tarjetas blancas redondeadas */
+        .semana {
+            background: white;
+            border-radius: 40px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-align: center;
+        }
+
+        .semana:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .semana h3 {
+            color: #333;
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        /* Estilos para reproductores, fotos e iFrames */
+        .semana iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 20px;
+            margin-top: 15px;
+        }
+
+        .semana video, 
+        .semana img {
+            width: 90%;
+            max-width: 100%;
+            border-radius: 20px;
+            margin: 15px auto 0 auto;
+            display: block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 50px;
             border-top: 9px solid rgb(185, 110, 222);
             background-color: rgb(243, 246, 151);
+            color: #333;
+            font-weight: bold;
         }
-        @media(max-width:600px){
-            footer{
+
+        footer .logo {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        footer .logo:hover {
+            transform: scale(1.1);
+        }
+
+        /* Adaptabilidad para pantallas pequeñas */
+        @media (max-width: 600px) {
+            footer {
                 flex-direction: column;
                 gap: 15px;
                 padding: 20px;
             }
+            
+            .semana {
+                padding: 20px;
+                margin: 20px 0;
+            }
         }
-        .logo {
-    transition: transform 0.3s ease;
-}
-
-.logo:hover {
-    transform: scale(1.1);
-}
-.semana {
-    background: white;
-    border-radius: 40px;
-    padding: 50px;
-    margin: 50px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-    transition: transform 0.10s ease, box-shadow 0.10s ease;
-}
-
-.semana:hover {
-    transform: translateY(5px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-}
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Bitácora Segunda y Tercera Unidad</h1>
+        <h1>Bitácora de Robótica</h1>
     </header>
+
     <main>
         <div class="semana">
-    <h3>Mi documento en PDF</h3>
-    <div class="pdf-container">
-        <iframe src="recursos/PDF/Documento.pdf"></iframe>
-    </div>
-</div>
-    <h3>Semana 1</h3>
-    <p>Aprendí sobre HTML y estructura básica.</p>
-</div>
+            <h3>Semana 1: Introducción al Arduino</h3>
+            <iframe src="Recursos/IntroduccionArduino.pdf"></iframe>
+        </div>
 
-<div class="semana">
-    <h3>Semana 2</h3>
-    <p>Aprendí sobre CSS y estilos.</p>
-</div>
+        <div class="semana">
+            <h3>Semana 2: Desarrollo de Proyectos</h3>
+            <p>Video de la semana 2:</p>
+            <video controls>
+                <source src="Recursos/videotics.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+
+        <div class="semana">
+            <h3>Semana 3: Conceptos Avanzados</h3>
+            <p>Video de la semana 3:</p>
+            <video controls>
+                <source src="Recursos/Video semana 3.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+
+        <div class="semana">
+            <h3>Semana 4: Sensores y Actuadores</h3>
+            <p>Video de la semana 4:</p>
+            <video controls>
+                <source src="Recursos/Video semana 4.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+
+        <div class="semana">
+            <h3>Semana 5: Elaboración de circuito</h3>
+            <p>Circuito:</p>
+            <img src="Recursos/Semana 5 foto.jpeg" alt="Foto del circuito Semana 5">
+        </div>
+
+        <div class="semana">
+            <h3>Semana 6: Avances de Robótica</h3>
+            <p>Video demostrativo de los temas de la semana 6:</p>
+            <video controls>
+                <source src="Recursos/SEMAFORO PH.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+
+        <div class="semana">
+            <h3>Semana 7: Mi Grabación de circuito</h3>
+            <p>Aquí te muestro el progreso de mi proyecto:</p>
+            <video controls>
+                <source src="Recursos/VIDEO PIR.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+
+        <div class="semana">
+            <h3>Suficiencia</h3>
+            <p>Proyecto hospital</p>
+            <video controls>
+                <source src="Recursos/VIDEO DE LA SUFICIENCIA.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
     </main>
+
     <footer>
         <span>@wfdanieela</span>
-        <img class="logo" src="https://www.capouilliez.edu.gt/assets/img/logo.png" height="80" width="300">
+        <img class="logo" src="https://www.capouilliez.edu.gt/assets/img/logo.png" height="80" width="300" alt="Logo Colegio">
     </footer>
+
 </body>
 </html>
-
-
